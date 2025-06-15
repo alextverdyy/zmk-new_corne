@@ -1,195 +1,195 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - $$mdi:arrow-up-bold$$
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&as TAB'
+  - '&as Q'
+  - '&as W'
+  - '&as E'
+  - '&as R'
+  - '&as T'
+  - '&as UP'
+  - '&as Y'
+  - '&as U'
+  - '&as I'
+  - '&as O'
+  - '&as P'
+  - '&as BSPC'
   - '&td0'
-  - A
-  - S
-  - D
-  - F
-  - G
-  - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-right-bold$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - $$mdi:keyboard-space$$
-  - $$mdi:arrow-down-bold$$
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
-  - LGUI
+  - '&as A'
+  - '&as S'
+  - '&as D'
+  - '&as F'
+  - '&as G'
+  - '&as LEFT'
+  - '&as ENTER'
+  - '&as RIGHT'
+  - '&as H'
+  - '&as J'
+  - '&as K'
+  - '&as L'
+  - '&as SEMI'
+  - '&as SQT'
+  - '&as LCTRL'
+  - '&as Z'
+  - '&as X'
+  - '&as C'
+  - '&as V'
+  - '&as B'
+  - '&as SPACE'
+  - '&as DOWN'
+  - '&as N'
+  - '&as M'
+  - '&as COMMA'
+  - '&as DOT'
+  - '&as FSLH'
+  - '&as ESC'
+  - '&as LGUI'
   - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - SYMBOL
-  - $$mdi:apple-keyboard-option$$
+  - '&as RALT'
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
+  - '&as N1'
+  - '&as N2'
+  - '&as N3'
+  - '&as N4'
+  - '&as N5'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&as N6'
+  - '&as N7'
+  - '&as N8'
+  - '&as N9'
+  - '&as N0'
+  - '&as BSPC'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
+  - '&as N4'
+  - '&as N5'
+  - '&as N6'
   - '&passwd'
   - '&SCRSH'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
+  - LCLK
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '&IMP_8'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:arrow-up-bold$$
+  - '&as UP'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - HOME
-  - {t: Sft+`, s: Sft+~}
+  - '&as HOME'
+  - '&as LS(GRAVE)'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
+  - '&as N7'
+  - '&as N8'
+  - '&as N9'
+  - '&as N0'
   - '&OSM_HYPR'
-  - $$mdi:volume-off$$
+  - '&as C_MUTE'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&IMP_6'
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - END
-  - $$mdi:keyboard-esc$$
+  - '&as LEFT'
+  - '&as DOWN'
+  - '&as RIGHT'
+  - '&as END'
+  - '&as ESC'
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - INS
-  - $$mdi:backspace-reverse-outline$$
+  - '&as INS'
+  - '&as DEL'
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - '&as EXCL'
+  - '&as AT'
+  - '&as HASH'
+  - '&as DLLR'
+  - '&as PRCNT'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&as CARET'
+  - '&as AMPS'
+  - '&as ASTRK'
+  - '&as LPAR'
+  - '&as RPAR'
+  - '&as BSPC'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - '&mkp MB4'
+  - LCLK
+  - MCLK
+  - RCLK
+  - MB4
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
+  - LCLK
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '-', s: _}
-  - {t: '=', s: +}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: \, s: '|'}
-  - {t: '`', s: '~'}
+  - '&as MINUS'
+  - '&as EQUAL'
+  - '&as LBKT'
+  - '&as RBKT'
+  - '&as BSLH'
+  - '&as GRAVE'
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
   - OUT BLE
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - '&mkp MB5'
+  - MB5
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
+  - '&as UNDER'
+  - '&as PLUS'
+  - '&as LBRC'
+  - '&as RBRC'
+  - '&as PIPE'
+  - '&as TILDE'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - '&as SPACE'
+  - '&as RET'
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - '&studio_unlock'
-  - Gui+1
-  - {t: Gui+1, s: Gui+!}
-  - {t: Gui+2, s: Gui+@}
-  - {t: Gui+3, s: Gui+#}
-  - {t: Gui+4, s: Gui+$}
-  - {t: '4', s: $}
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
+  - '&as LG(NUMBER_1)'
+  - '&as LG(N1)'
+  - '&as LG(N2)'
+  - '&as LG(N3)'
+  - '&as LG(N4)'
+  - '&as N4'
+  - '&as F6'
+  - '&as F7'
+  - '&as F8'
+  - '&as F9'
+  - '&as F10'
+  - '&as F11'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - '&mkp MB4'
+  - LCLK
+  - MCLK
+  - RCLK
+  - MB4
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
+  - LCLK
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:progress-download$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - PRINTSCREEN
-  - F12
+  - LCLK
+  - MCLK
+  - RCLK
+  - '&as PRINTSCREEN'
+  - '&as F12'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
-  - $$mdi:volume-off$$
+  - MB5
+  - '&as C_MUTE'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - SCROLLLOCK
-  - PAUSE BREAK
+  - '&as SCROLLLOCK'
+  - '&as PAUSE_BREAK'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
