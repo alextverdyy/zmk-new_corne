@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - '&as TAB'
+  - $$mdi:keyboard-tab$$
   - '&as Q'
   - '&as W'
   - '&as E'
@@ -15,21 +15,21 @@ layers:
   - '&as P'
   - '&as BSPC'
   - '&td0'
-  - '&as A'
-  - '&as S'
-  - '&as D'
-  - '&as F'
+  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - '&as G'
   - '&as LEFT'
   - '&as ENTER'
   - '&as RIGHT'
   - '&as H'
-  - '&as J'
-  - '&as K'
-  - '&as L'
-  - '&as SEMI'
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: RIGHT GUI}
+  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-option$$', s: ':'}
   - '&as SQT'
-  - '&as LCTRL'
+  - $$mdi:apple-keyboard-control$$
   - '&as Z'
   - '&as X'
   - '&as C'
@@ -43,12 +43,12 @@ layers:
   - '&as DOT'
   - '&as FSLH'
   - '&as ESC'
-  - '&as LGUI'
+  - LGUI
   - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - SYMBOL
-  - '&as RALT'
+  - $$mdi:apple-keyboard-option$$
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&as N1'
@@ -84,7 +84,7 @@ layers:
   - '&as N9'
   - '&as N0'
   - '&OSM_HYPR'
-  - '&as C_MUTE'
+  - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&IMP_6'
   - '&as LEFT'
