@@ -108,7 +108,7 @@
         IMP_8: IMP_8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&none>;
             label = "IMP_8";
         };
 
