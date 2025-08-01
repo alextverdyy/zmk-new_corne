@@ -26,6 +26,7 @@
 #define SYS 4
 #define MOUSE 5
 #define NUMSYM 6
+#define BUTTONS 7
 
 #define XXX &none
 #define ___ &trans
@@ -62,6 +63,7 @@
 #define MAC_STTL               MAC_START_OF_LINE
 #define MAC_END_OF_LINE        LG(RIGHT)
 #define MAC_ENDL               MAC_END_OF_LINE
+#define UNDO_TOG_BUT_LAYER &kp MAC_UNDO
 
 
 
@@ -98,6 +100,9 @@
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
+
+MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS) // Left-hand HRM - layer
+MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS) // Right-hand HRM - layer
 
 // Hack: Make HRM combos tap-only (cf, ZMK issue #544).
 #define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \
@@ -229,6 +234,8 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 #define PIN_APP   &kp LG(LC(LS(A)))       // Pin application across desktops.
 #define DSK_MGR   &kp LA(GRAVE)           // Desktop manager.
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
+#define Z_BUT  &hll BUTTONS Z
+#define FSLH_BUT  &hlr BUTTONS FSLH
 
 /* Keymap */
 
@@ -245,7 +252,7 @@ ZMK_BASE_LAYER(Base,
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤          ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
     &kp TAB         &hml LCTRL A     &hml LALT S      &hml LGUI D    &hml LSHFT F   &kp G          ,            &kp H           &hmr RSHFT J    &hmr LGUI K    &hmr LALT L      &hmr LCTRL SQT     &kp Y          ,
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤          ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LCTRL       &kp Z           &kp X           &kp C           &kp V           &kp B          ,           &kp N           &kp M           &comma_morph    &dot_morph      &kp FSLH           &qexcl         ,
+     &kp LCTRL       Z_BUT           &kp X           &kp C           &kp V           &kp B          ,           &kp N           &kp M           &comma_morph    &dot_morph      FSLH_BUT           &qexcl         ,
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤          ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
                                                     &lt SYS ESC     &lt_spc NAV 0    MAGIC_SHIFT     ,          &lt FN RET      SMART_NUM      &lt NUMSYM DEL ,
                                                  //╰───────────────┴───────────────┴───────────────╯          ╰───────────────┴───────────────┴───────────────╯
@@ -368,6 +375,27 @@ ZMK_BASE_LAYER(Numsym,
         ___           ___             &kp N1          &kp N2         &kp N3         &kp DOT        ,            &kp HASH      &kp LBRC        &kp RBRC        &kp CARET        &kp BSLH             ___       ,
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤          ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
                                                              ___      &kp N0             ___       ,                ___           ___           ___         ,
+                                                 //╰───────────────┴───────────────┴───────────────╯          ╰───────────────┴───────────────┴───────────────╯
+                                                  // ╭───────────────┬───────────────┬───────────────╮
+                                                                      U_MS_U                        ,
+                                                  // ├───────────────┼───────────────┼───────────────┤
+                                                      U_MS_L          &mkp LCLK           U_MS_R    ,
+                                                  // ├───────────────┼───────────────┼───────────────┤
+                                                      &kp SPACE          U_MS_D                       ,
+                                                  // ╰───────────────┴───────────────┴───────────────╯
+&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+)
+
+
+ZMK_BASE_LAYER(Buttons,
+// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮          ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
+        &none       &kp MAC_DKTP &kp MAC_WINP  &kp MAC_WINN      &kp MAC_DKTN   &kp MAC_APPWIN,  		&kp MAC_APPWIN &kp MAC_DKTP  &kp MAC_WINP  &kp MAC_WINN  &kp MAC_DKTN &kp RG(PLUS),
+// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   	      ┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+        &none       &kp LCTRL    &kp LALT     &kp LGUI           &kp LSHFT     &kp MAC_MC,      		&kp MAC_MC     &kp LSHFT     &kp LGUI        &kp LALT         &kp LCTRL    &kp RG(MINUS),
+// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   	      ┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+   &mt GLOBE MAC_REDO UNDO_TOG_BUT_LAYER    &kp MAC_CUT   &kp MAC_COPY   &kp MAC_PASTE    &kp MAC_SP,    	&kp MAC_SP     &kp MAC_PASTE &kp MAC_COPY  &kp MAC_CUT   UNDO_TOG_BUT_LAYER  &mt GLOBE MAC_REDO,
+// ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤          ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
+                                                             ___      ___             ___       ,                ___           ___           ___         ,
                                                  //╰───────────────┴───────────────┴───────────────╯          ╰───────────────┴───────────────┴───────────────╯
                                                   // ╭───────────────┬───────────────┬───────────────╮
                                                                       U_MS_U                        ,
