@@ -3,3 +3,12 @@ zmk/
 modules/
 tools/
 .west/
+nice-view-gem
+zephyr
+zmk-adaptive-key
+zmk-auto-layer
+zmk-helpers
+zmk-leader-key
+zmk-new_corne
+zmk-tri-state
+Justfile
